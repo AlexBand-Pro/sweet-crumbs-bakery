@@ -6,6 +6,9 @@
 
 header {
   background-color: #EFAFBF;
+  position: fixed;
+  width: 100%;
+  z-index: 12;
 }
 
 .logo-img {
@@ -99,4 +102,73 @@ nav > ul > li:hover, .current-tab-highlighted {
 
 .menu-toggle.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding-inline: 1em;
+}
+
+/* Hero Section */
+
+.hero-section {
+  background-image: url(./images/bakery-hero-img-m.avif);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.hero-section > * {
+  z-index: 11;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: wheat;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.hero-btn {
+  border-radius: 100em;
+  border: 1px solid #EFAFBF;
+  padding: 0.6em 0.8em;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.browse-menu {
+  background-color: #EFAFBF;
+  color: black;
 }
