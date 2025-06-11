@@ -6,12 +6,8 @@
     <title>Sweet Crumbs Bakery | Portland Oregon</title>
     <link rel="stylesheet" href="index.css" />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    /> -->
+    <link rel="preload" as="image" href="./images/bakery-hero-img-m.avif">
+    <link rel="preload" as="image" href="./images/bakery-hero-img.avif">
   </head>
   <body>
     <header>
@@ -36,14 +32,41 @@
     </header>
     <main>
       <section class="hero-section">
-        <h1>Sweet Crumbs <br> Handmade with Heart</h1>
+        <div class="hero-content-container">
+          <h1>
+            Sweet Crumbs <br />
+            Handmade with Heart
+          </h1>
 
-        <h2 class="tagline">Freshly baked artisan bread, pastries & custom cakes daily </h2>
+          <!-- <img class="logo-img" src="./images/sweet-crumbs-logo.png" alt="logo"> -->
 
-        <div class="hero-btns">
-          <a class="hero-btn browse-menu" href="#">Browse Menu</a>
-          <a class="hero-btn order-cake" href="#">Order a Custom Cake</a>
+          <h2 class="tagline">
+            Freshly baked artisan bread, pastries & custom cakes daily
+          </h2>
+
+          <div class="hero-btns">
+            <a class="hero-btn browse-menu" href="#">Browse Menu</a>
+            <a class="hero-btn order-cake" href="#">Order a Custom Cake</a>
+          </div>
         </div>
+
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="/images/bakery-hero-img-m.avif"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/images/bakery-hero-img.avif"
+          />
+          <img
+            aria-hidden="true"
+            decoding="eager"
+            src="/images/bakery-hero-img.avif"
+            width="1920"
+            height="1280"
+          />
+        </picture>
       </section>
     </main>
     <script src="index.js"></script>
