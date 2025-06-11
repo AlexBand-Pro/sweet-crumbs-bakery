@@ -197,9 +197,12 @@ section {
   color: wheat;
 }
 
+h1, .tagline {
+  line-height: 1.5;
+}
+
 h1 {
   font-size: 8.75vw;
-  line-height: 1.5;
 }
 
 .logo-img {
@@ -208,7 +211,6 @@ h1 {
 
 .tagline {
   font-size: 5vw;
-  line-height: 1.5;
 }
 
 .hero-btns {
